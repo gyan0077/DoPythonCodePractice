@@ -1,0 +1,55 @@
+⭐ Most Frequently Asked Python Coding Questions (Data Engineer – MNC)
+🟢 1. Core Python Logic Coding (Very Frequently Asked)
+
+====================================Typical questions========================================
+Reverse a string without using built-in reverse
+Find max value in list without max()
+Check if number is prime
+Find duplicates / unique elements in list
+Remove duplicates from list
+Check palindrome string
+Find missing number in array
+Fibonacci series generation
+Find common elements between two lists
+Convert list → dictionary
+Check if array is sorted
+
+
+
+🟡 2. List / String / Dictionary Coding (Very Important)
+====================================Typical questions========================================
+Count word frequency using dictionary
+First duplicate element in array
+Flatten nested list
+Find most frequent element in list
+Filter elements using list comprehension
+Merge and deduplicate data from multiple sources
+
+
+🟠 3. Pandas / Data Processing Coding (High Weightage for DE)
+====================================Typical questions========================================
+Handle missing values in Pandas DataFrame
+Correlation between columns
+GroupBy and Pivot table operations
+Data cleaning and transformation
+Date-time transformation
+
+
+🔵 4. Real-World Data Coding Problems (MNC Scenario Style)
+Process large CSV file without loading into memory
+Merge multiple data sources
+Build simple ETL transformation logic
+Producer-consumer pattern for data processing
+Parse nested JSON
+
+🟣 5. Python Advanced Coding (Mid–Senior Level)
+====================================Typical questions========================================
+Implement iterator / generator for data streaming
+Context manager usage
+Logging + exception handling in pipelines
+Async / multithreading basics
+Memory optimization
+
+
+
+
