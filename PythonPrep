@@ -3,7 +3,7 @@
 1: Write a Python program to remove duplicate elements from a list without using built-in set().
 
 
-Method 1: Using a loop (recommended & beginner-friendly)
+Method 1: Using a loop
 
 # Remove duplicates from a list without using set()
 
@@ -18,7 +18,7 @@ print("Original List:", original_list)
 print("List after removing duplicates:", unique_list)
 
 
-Method 2: Using list comprehension (shorter version ✨)
+Method 2: Using list comprehension
 
 original_list = [1, 2, 2, 3, 4, 4, 5]
 unique_list = []
@@ -57,21 +57,166 @@ print("List after removing duplicates:", unique_list)
 
 2: Write a Python program to find the second largest number in a list.
 
+Method 1: Using sorting
+
+numbers = [10, 20, 4, 45, 99]
+numbers.sort()
+second_largest = numbers[-2]
+print("Second largest number:", second_largest)
+
+Method 2: Without sorting
+
+numbers = [10, 20, 4, 45, 99]
+
+largest = second_largest = float('-inf')
+for num in numbers:
+    if num > largest:
+        second_largest = largest
+        largest = num
+    elif num > second_largest and num != largest:
+        second_largest = num
+print("Second largest number:", second_largest)
+
+
+Method 3: Using set() (handles duplicates automatically) ✨
+
+numbers = [10, 20, 4, 45, 99, 99]
+
+unique_numbers = list(set(numbers))
+unique_numbers.sort()
+
+print("Second largest number:", unique_numbers[-2])
+
 
 3: Write a Python program to count the occurrence of each element in a list.
 
+Method 1: Using dictionary
+# Count occurrence of each element in a list
+
+numbers = [1, 2, 2, 3, 4, 4, 4, 5]
+count_dict = {}
+
+for num in numbers:
+    if num in count_dict:
+        count_dict[num] += 1
+    else:
+        count_dict[num] = 1
+print("Element occurrences:", count_dict)
+
+Method 2: Using collections.Counter
+
+from collections import Counter
+numbers = [1, 2, 2, 3, 4, 4, 4, 5]
+count = Counter(numbers)
+print(count)
+
+
+
 4: Write a Python program to merge two lists into a single list without duplicates.
 
+Method 1: Using set()
+
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+
+merged_list = list(set(list1 + list2))
+print("Merged list without duplicates:", merged_list)
+
+⚠️ Note: This method does not preserve order
+
+Method 2: Preserve order
+
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+
+merged_list = []
+seen = set()
+
+for item in list1 + list2:
+    if item not in seen:
+        merged_list.append(item)
+        seen.add(item)
+
+print("Merged list without duplicates:", merged_list)
+
+
+Method 3: Without using set()
+
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+
+merged_list = list1.copy()
+
+for item in list2:
+    if item not in merged_list:
+        merged_list.append(item)
+
+print("Merged list without duplicates:", merged_list)
+
+
+
+
 5: Write a Python program to split a list into even numbers and odd numbers.
-Write a Python program to flatten a nested list.
+
+Method 1: Using a loop
+
+numbers = [10, 15, 22, 33, 40, 55, 60]
+even_numbers = []
+odd_numbers = []
+
+for num in numbers:
+    if num % 2 == 0:
+        even_numbers.append(num)
+    else:
+        odd_numbers.append(num)
+
+print("Even numbers:", even_numbers)
+print("Odd numbers:", odd_numbers)
+
+Method 2: Using list comprehension
+
+numbers = [10, 15, 22, 33, 40, 55, 60]
+
+even_numbers = [num for num in numbers if num % 2 == 0]
+
+odd_numbers = [num for num in numbers if num % 2 != 0]
+
+print("Even numbers:", even_numbers)
+print("Odd numbers:", odd_numbers)
+
+
+
+6: Write a Python program to flatten a nested list.
+
+nested_list = [1, 2, [3, 4], [5, 6]]
+flat_list = []
+
+for item in nested_list:
+    if isinstance(item, list):
+        for sub_item in item:
+            flat_list.append(sub_item)
+    else:
+        flat_list.append(item)
+print("Flattened list:", flat_list)
+
+Method 2: Using list comprehension
+
+nested_list = [1, 2, [3, 4], [5, 6]]
+
+flat_list = 
+[element for item in nested_list for element in (item if isinstance(item, list) else [item])]
+
+print(flat_list)
+
+
 
 
 📘 SECTION 2 — Dictionary Questions (Very Important for Data Engineers)
 
-These simulate JSON handling tasks.
-
 Write a Python program to check whether a key exists in a dictionary.
+
 Write a Python program to merge two dictionaries.
+
 Write a Python program to convert two lists into a dictionary.
 
 📄 SECTION 3 — File Handling Questions (High Probability in Interviews)
@@ -133,28 +278,30 @@ Difference between iterator and generator.
 Write generator function for even numbers.
 Write generator function for Fibonacci series.
 
-🧱 SECTION 9 — Object Oriented Programming (Light Questions Only)
-Expected basics only.
+🧱 SECTION 9 — Object Oriented Programming
 
-Create class Employee with attributes name and salary.
-Create constructor inside class.
-Demonstrate inheritance using parent and child class.
-Demonstrate method overriding example.
-Demonstrate encapsulation example.
+1: Create class Employee with attributes name and salary.
 
-📈 SECTION 10 — Pandas Questions (Almost Always Asked Before PySpark)
-Using pandas
+2: Create constructor inside class.
 
-Read CSV file using pandas.
-Select specific columns from dataframe.
-Filter rows based on condition.
-Handle missing values using fillna().
-Remove duplicate rows.
-Merge two dataframes.
-Perform groupby aggregation.
+3: Demonstrate inheritance using parent and child class.
 
-🚀 SECTION 11 — Real Data Engineer Scenario Questions (Most Important)
-These are interview favorites.
+4: Demonstrate method overriding example.
+
+5: Demonstrate encapsulation example.
+
+
+📈 SECTION 10 — Pandas Questions
+
+1: Read CSV file using pandas.
+2: Select specific columns from dataframe.
+3: Filter rows based on condition.
+4: Handle missing values using fillna().
+5: Remove duplicate rows.
+6: Merge two dataframes.
+7: Perform groupby aggregation.
+
+🚀 SECTION 11 — Real Data Engineer Scenario Questions - These are interview favorites.
 
 Read CSV file and remove duplicates.
 Convert CSV file into parquet format.
