@@ -1,115 +1,140 @@
-⭐ Most Frequently Asked Python Coding Questions (Data Engineer – MNC)
-🟢 1. Core Python Logic Coding (Very Frequently Asked)
-
-===========Typical questions================
-1: Reverse a string without using built-in
- reverse
-
-Time Complexity: O(n)
-
-✅ Method 1: Using Loop
-def reverse_string(s):
-    rev = ""
-    for char in s:
-        rev = char + rev
-    return rev
-
-# Example
-text = "DataEngineer"
-print(reverse_string(text))
-
-✅ Method 2: Using While Loop
-def reverse_string(s):
-    rev = ""
-    i = len(s) - 1
-    
-    while i >= 0:
-        rev += s[i]
-        i -= 1
-        
-    return rev
-
-# Example
-print(reverse_string("Python"))
-
-✅ Method 3: Using Recursion
-def reverse_string(s):
-    if len(s) == 0:
-        return s
-    return reverse_string(s[1:]) + s[0]
-
-# Example
-print(reverse_string("SQLPython"))
-
-========== By using Built-in method=========
-✅ Method 1: Using Slicingdef reverse_string(s):
-    return s[::-1]
-
-# Example
-text = "DataEngineer"
-print(reverse_string(text))
-
-✅ Method 2: Using reversed()def reverse_string(s):
-    return "".join(reversed(s))
-
-# Example
-print(reverse_string("Python"))
-
-✅ Method 3: One-Line
-text = "SQLPython"
-print(text[::-1])
+🧠 SECTION 1 — Python Basics (Very Frequently Asked)
+Lists
+Write a Python program to remove duplicate elements from a list without using built-in set().
+Write a Python program to find the second largest number in a list.
+Write a Python program to count the occurrence of each element in a list.
+Write a Python program to merge two lists into a single list without duplicates.
+Write a Python program to split a list into even numbers and odd numbers.
+Write a Python program to flatten a nested list.
 
 
-2: Find max value in list without max()
+📘 SECTION 2 — Dictionary Questions (Very Important for Data Engineers)
 
-Check if number is prime
-Find duplicates / unique elements in list
+These simulate JSON handling tasks.
+
+Write a Python program to check whether a key exists in a dictionary.
+Write a Python program to merge two dictionaries.
+Write a Python program to convert two lists into a dictionary.
+
+📄 SECTION 3 — File Handling Questions (High Probability in Interviews)
+
+Very important for ETL pipelines.
+
+Write a Python program to read a CSV file and print its contents.
+Write a Python program to count number of lines in a file.
+Write a Python program to count number of words in a file.
+Write a Python program to count occurrences of a specific word in file.
+Write a Python program to append new content into existing file.
+Write a Python program to copy content from one file to another file.
+Write a Python program to extract numbers from a text file.
+
+📦 SECTION 4 — JSON Handling Questions (Very Frequently Asked in Data Engineering)
+
+Real pipeline scenarios.
+
+Write a Python program to read JSON file.
+Write a Python program to convert JSON data into dictionary.
+Write a Python program to extract nested values from JSON.
+
+📊 SECTION 5 — Data Processing Questions (Most Important Section)
+
+These simulate real ETL transformations.
+
+Write a Python program to remove duplicate rows from dataset.
+Write a Python program to handle missing values in dataset.
+Write a Python program to replace NULL values with default values.
+Write a Python program to filter dataset based on condition.
+Write a Python program to join two datasets using common column.
+Write a Python program to aggregate dataset values.
+Find total salary department wise
+Write a Python program to convert CSV file into dictionary format.
+Write a Python program to convert dictionary into dataframe-like structure.
+
+⚙️ SECTION 6 — Functions Questions
+Common conceptual + coding questions.
+
+Write a Python function to calculate factorial of number.
+Write a Python function using default parameters.
+Write a Python function using *args.
+Write a Python function using **kwargs.
+Write a Python function to check prime number.
+Write a Python function to reverse string.
+
+⚠️ SECTION 7 — Exception Handling Questions
+Often asked for production pipeline readiness.
+
+Write Python program using try-except block to handle file not found error.
+Write Python program to handle division by zero exception.
+Write Python program using finally block.
+Write Python program to create custom exception.
+
+🧬 SECTION 8 — Generators & Iterators
+Conceptual questions.
+
+Difference between iterator and generator.
+Write generator function for even numbers.
+Write generator function for Fibonacci series.
+
+🧱 SECTION 9 — Object Oriented Programming (Light Questions Only)
+Expected basics only.
+
+Create class Employee with attributes name and salary.
+Create constructor inside class.
+Demonstrate inheritance using parent and child class.
+Demonstrate method overriding example.
+Demonstrate encapsulation example.
+
+📈 SECTION 10 — Pandas Questions (Almost Always Asked Before PySpark)
+Using pandas
+
+Read CSV file using pandas.
+Select specific columns from dataframe.
+Filter rows based on condition.
+Handle missing values using fillna().
+Remove duplicate rows.
+Merge two dataframes.
+Perform groupby aggregation.
+
+🚀 SECTION 11 — Real Data Engineer Scenario Questions (Most Important)
+These are interview favorites.
+
+Read CSV file and remove duplicates.
+Convert CSV file into parquet format.
+Read JSON file and flatten nested structure.
+Extract error messages from log file.
+Compare two datasets and find differences.
+Read API response and store into file.
+Process large file line-by-line efficiently.
+Schedule script execution automatically.
+Retry failed records processing logic.
+Log pipeline execution status.
+
+
+⭐ If You Prepare These 25 Questions First (Priority List)
+Most interview-efficient subset:
+
 Remove duplicates from list
-Check palindrome string
-Find missing number in array
-Fibonacci series generation
-Find common elements between two lists
-Convert list → dictionary
-Check if array is sorted
-
-
-
-
-
-🟡 2. List / String / Dictionary Coding (Very Important)
-============Typical questions===============
-Count word frequency using dictionary
-First duplicate element in array
-Flatten nested list
-Find most frequent element in list
-Filter elements using list comprehension
-Merge and deduplicate data from multiple sources
-
-
-🟠 3. Pandas / Data Processing Coding (High Weightage for DE)
-====================================Typical questions========================================
-Handle missing values in Pandas DataFrame
-Correlation between columns
-GroupBy and Pivot table operations
-Data cleaning and transformation
-Date-time transformation
-
-
-🔵 4. Real-World Data Coding Problems (MNC Scenario Style)
-Process large CSV file without loading into memory
-Merge multiple data sources
-Build simple ETL transformation logic
-Producer-consumer pattern for data processing
-Parse nested JSON
-
-🟣 5. Python Advanced Coding (Mid–Senior Level)
-====================================Typical questions========================================
-Implement iterator / generator for data streaming
-Context manager usage
-Logging + exception handling in pipelines
-Async / multithreading basics
-Memory optimization
-
-
-
-
+Count frequency using dictionary
+Read CSV file
+Read JSON file
+Flatten nested JSON
+Handle missing values
+Join two datasets
+Merge dictionaries
+args vs kwargs
+Exception handling example
+File read/write program
+Iterator vs generator
+List comprehension example
+Lambda function example
+Merge two dataframes
+Groupby aggregation
+Filter dataframe rows
+Convert CSV → dictionary
+Extract numbers from file
+Replace null values
+API response parsing
+Compare two datasets
+Log file parsing
+Convert JSON → dataframe
+Write reusable function for ETL step
