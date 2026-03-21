@@ -1,10 +1,16 @@
-🧠 SECTION 1 — Python Basics (Very Frequently Asked)
-Lists
-Write a Python program to remove duplicate elements from a list without using built-in set().
-Write a Python program to find the second largest number in a list.
-Write a Python program to count the occurrence of each element in a list.
-Write a Python program to merge two lists into a single list without duplicates.
-Write a Python program to split a list into even numbers and odd numbers.
+🧠 SECTION 1 — Lists
+
+1: Write a Python program to remove duplicate elements from a list without using built-in set().
+
+
+2: Write a Python program to find the second largest number in a list.
+
+
+3: Write a Python program to count the occurrence of each element in a list.
+
+4: Write a Python program to merge two lists into a single list without duplicates.
+
+5: Write a Python program to split a list into even numbers and odd numbers.
 Write a Python program to flatten a nested list.
 
 
