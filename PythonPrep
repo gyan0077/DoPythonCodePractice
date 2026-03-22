@@ -313,17 +313,82 @@ print(result)
 
 
 
-📄 SECTION 3 — File Handling Questions (High Probability in Interviews)
+📄 SECTION 3 — File Handling Questions
 
-Very important for ETL pipelines.
+1: Write a Python program to read a CSV file and print its contents.
 
-Write a Python program to read a CSV file and print its contents.
-Write a Python program to count number of lines in a file.
-Write a Python program to count number of words in a file.
-Write a Python program to count occurrences of a specific word in file.
-Write a Python program to append new content into existing file.
-Write a Python program to copy content from one file to another file.
-Write a Python program to extract numbers from a text file.
+import csv
+# Open the CSV file
+with open('sample.csv', mode='r') as file:
+    csv_reader = csv.reader(file)
+
+    # Print each row
+    for row in csv_reader:
+        print(row)
+
+# Using Pandas:
+
+import pandas as pd
+df = pd.read_csv("sample.csv")
+print(df)
+
+
+2: Write a Python program to count number of lines in a file.
+
+Method 1: Using basic file reading
+# Open the file
+with open("sample.txt", "r") as file:
+    line_count = 0  
+    for line in file:
+        line_count += 1
+print("Number of lines:", line_count)
+
+Method 2: Using readlines() 
+with open("sample.txt", "r") as file:
+    lines = file.readlines()
+
+print("Number of lines:", len(lines))
+
+
+Method 3: Efficient method for large files
+
+with open("sample.txt", "r") as file:
+    line_count = sum(1 for line in file)
+
+print("Number of lines:", line_count)
+
+
+3: Write a Python program to count number of words in a file.
+
+Method 1: Basic approach
+# Open the file
+with open("sample.txt", "r") as file:
+    content = file.read()
+
+# Split content into words
+words = content.split()
+
+# Count words
+print("Number of words:", len(words))
+
+Method 2: Efficient method for large files
+
+word_count = 0
+with open("sample.txt", "r") as file:
+    for line in file:
+        words = line.split()
+        word_count += len(words)
+
+print("Number of words:", word_count)
+
+
+4: Write a Python program to count occurrences of a specific word in file.
+
+5: Write a Python program to append new content into existing file.
+
+6: Write a Python program to copy content from one file to another file.
+
+7: Write a Python program to extract numbers from a text file.
 
 📦 SECTION 4 — JSON Handling Questions (Very Frequently Asked in Data Engineering)
 
