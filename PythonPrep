@@ -211,13 +211,107 @@ print(flat_list)
 
 
 
-📘 SECTION 2 — Dictionary Questions (Very Important for Data Engineers)
+📘 SECTION 2 — Dictionary Questions
 
-Write a Python program to check whether a key exists in a dictionary.
+1: Write a Python program to check whether a key exists in a dictionary.
 
-Write a Python program to merge two dictionaries.
+Method 1: Using in keyword
+student = {
+    "name": "Rahul",
+    "age": 21,
+    "course": "Python"
+}
 
-Write a Python program to convert two lists into a dictionary.
+key = "age"
+
+if key in student:
+    print("Key exists in dictionary")
+else:
+    print("Key does not exist")
+
+Method 2: Using .keys() method
+student = {
+    "name": "Rahul",
+    "age": 21,
+    "course": "Python"
+}
+
+if "age" in student.keys():
+    print("Key exists")
+else:
+    print("Key does not exist")
+
+
+2: Write a Python program to merge two dictionaries.
+
+Method 1: Using update() method
+dict1 = {"a": 1, "b": 2}
+dict2 = {"c": 3, "d": 4}
+
+dict1.update(dict2)
+
+print("Merged dictionary:", dict1)
+
+
+Method 2: Using | operator
+dict1 = {"a": 1, "b": 2}
+dict2 = {"c": 3, "d": 4}
+
+merged_dict = dict1 | dict2
+print("Merged dictionary:", merged_dict)
+
+Method 3: Using dictionary unpacking
+dict1 = {"a": 1, "b": 2}
+dict2 = {"c": 3, "d": 4}
+
+merged_dict = {**dict1, **dict2}
+print("Merged dictionary:", merged_dict)
+
+
+
+3: Write a Python program to convert two lists into a dictionary.
+
+Method 1: Using zip()
+keys = ["a", "b", "c"]
+values = [1, 2, 3]
+result = dict(zip(keys, values))
+print("Dictionary:", result)
+
+Method 2: Using loop
+keys = ["a", "b", "c"]
+values = [1, 2, 3]
+
+result = {}
+
+for i in range(len(keys)):
+    result[keys[i]] = values[i]
+
+print("Dictionary:", result)
+
+Method 3: Using dictionary comprehension
+keys = ["a", "b", "c"]
+values = [1, 2, 3]
+
+result = {keys[i]: values[i] for i in range(len(keys))}
+
+print(result)
+
+###############################################
+
+If values list is shorter but we still want all keys- missing values → assign None
+
+keys = ["a", "b", "c", "d"]
+values = [1, 2]
+
+result = {}
+for i in range(len(keys)):
+    if i < len(values):
+        result[keys[i]] = values[i]
+    else:
+        result[keys[i]] = None
+print(result)
+
+
 
 📄 SECTION 3 — File Handling Questions (High Probability in Interviews)
 
