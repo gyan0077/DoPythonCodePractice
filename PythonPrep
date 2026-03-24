@@ -448,14 +448,34 @@ except FileNotFoundError:
 
 7: Write a Python program to extract numbers from a text file.
 
+# Import regular expression 
+import re
 
-📦 SECTION 4 — JSON Handling Questions (Very Frequently Asked in Data Engineering)
+filename = input("Enter the file name: ")
 
-Real pipeline scenarios.
+try:
+    with open(filename, 'r') as file:
+        content = file.read()
 
-Write a Python program to read JSON file.
-Write a Python program to convert JSON data into dictionary.
-Write a Python program to extract nested values from JSON.
+ # Extract numbers using regular expression
+        numbers = re.findall(r'\d+', content)
+
+    print("Numbers found in the file:")
+    for num in numbers:
+        print(num)
+
+except FileNotFoundError:
+    print("File not found. Please check the file name.")
+
+
+
+📦 SECTION 4 — JSON Handling Questions
+
+1: Write a Python program to read JSON file.
+
+2: Write a Python program to convert JSON data into dictionary.
+
+3: Write a Python program to extract nested values from JSON.
 
 📊 SECTION 5 — Data Processing Questions (Most Important Section)
 
