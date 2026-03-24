@@ -384,11 +384,70 @@ print("Number of words:", word_count)
 
 4: Write a Python program to count occurrences of a specific word in file.
 
+
+filename = input("Enter the file name: ")
+word_to_count =
+input("Enter the word to count: ")
+
+count = 0
+
+try:
+    
+    with open(filename, 'r') as file:
+        for line in file:
+            words = line.split()
+            
+            # Count occurrences of the word
+            for word in words:
+                if word.lower() == word_to_count.lower():
+                    count += 1
+
+    print(f"The word '{word_to_count}' occurred {count} times in the file.")
+
+except FileNotFoundError:
+    print("File not found. Please check the file name.")
+
+
 5: Write a Python program to append new content into existing file.
+
+filename = input("Enter the file name: ")
+new_content = 
+input("Enter the content to append: ")
+
+try:
+    with open(filename, 'a') as file:
+        file.write("\n" + new_content)
+
+    print("Content appended successfully.")
+
+except FileNotFoundError:
+    print("File not found. Please check the file name.")
+
 
 6: Write a Python program to copy content from one file to another file.
 
+source_file = 
+input("Enter the source file name: ")
+destination_file =
+input("Enter the destination file name: ")
+
+try:
+  
+    with open(source_file, 'r') as src:
+        content = src.read()
+
+    with open(destination_file, 'w') as dest:
+        dest.write(content)
+
+    print("Content copied successfully.")
+
+except FileNotFoundError:
+    print("Source file not found. Please check the file name.")
+
+
+
 7: Write a Python program to extract numbers from a text file.
+
 
 📦 SECTION 4 — JSON Handling Questions (Very Frequently Asked in Data Engineering)
 
