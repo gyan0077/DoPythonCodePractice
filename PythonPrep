@@ -473,26 +473,97 @@ except FileNotFoundError:
 
 1: Write a Python program to read JSON file.
 
+import json
+
+filename = input("Enter the JSON file name: ")
+
+try:
+   
+    with open(filename, 'r') as file:
+        data = json.load(file)
+
+    print("Data from JSON file:")
+    print(data)
+
+except FileNotFoundError:
+    print("File not found. Please check the file name.")
+except json.JSONDecodeError:
+    print("Invalid JSON format.")
+
+
 2: Write a Python program to convert JSON data into dictionary.
 
+# Program to convert JSON data into dictionary
+
+import json
+json_data = '{"name": "Rahul", "age": 21, "course": "Computer Science"}'
+
+python_dict = json.loads(json_data)
+
+print("Converted Python Dictionary:")
+print(python_dict)
+
+
+Function.            Purpose
+json.load().         Reads JSON from a file
+json.loads().        Reads JSON from a string
+
 3: Write a Python program to extract nested values from JSON.
+
+# Program to extract nested values from JSON
+
+import json
+
+json_data = '''
+{
+    "student": {
+        "name": "Rahul",
+        "age": 21,
+        "course": {
+            "title": "Computer Science",
+            "year": "Final"
+        }
+    }
+}
+'''
+
+# Convert JSON string into dictionary
+data = json.loads(json_data)
+
+student_name = data["student"]["name"]
+course_title = data["student"]["course"]["title"]
+course_year = data["student"]["course"]["year"]
+
+print("Student Name:", student_name)
+print("Course Title:", course_title)
+print("Course Year:", course_year)
+
+
 
 📊 SECTION 5 — Data Processing Questions (Most Important Section)
 
 These simulate real ETL transformations.
 
-Write a Python program to remove duplicate rows from dataset.
-Write a Python program to handle missing values in dataset.
-Write a Python program to replace NULL values with default values.
-Write a Python program to filter dataset based on condition.
-Write a Python program to join two datasets using common column.
-Write a Python program to aggregate dataset values.
-Find total salary department wise
-Write a Python program to convert CSV file into dictionary format.
-Write a Python program to convert dictionary into dataframe-like structure.
+1: Write a Python program to remove duplicate rows from dataset.
 
-⚙️ SECTION 6 — Functions Questions
-Common conceptual + coding questions.
+2: Write a Python program to handle missing values in dataset.
+
+3: Write a Python program to replace NULL values with default values.
+
+4: Write a Python program to filter dataset based on condition.
+
+5: Write a Python program to join two datasets using common column.
+
+6: Write a Python program to aggregate dataset values.
+
+7: Find total salary department wise
+
+8: Write a Python program to convert CSV file into dictionary format.
+
+9: Write a Python program to convert dictionary into dataframe-like structure.
+
+
+⚙️ SECTION 6 — Functions
 
 Write a Python function to calculate factorial of number.
 Write a Python function using default parameters.
