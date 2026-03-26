@@ -565,10 +565,45 @@ These simulate real ETL transformations.
 
 ⚙️ SECTION 6 — Functions
 
-Write a Python function to calculate factorial of number.
-Write a Python function using default parameters.
-Write a Python function using *args.
+1: Write a Python function to calculate factorial of number.
 
+Method1: By using function 
+
+def factorial(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    return fact
+
+num = int(input("Enter a number: "))
+
+result = factorial(num)
+print("Factorial of", num, "is:", result)
+
+
+# Method2: Byusing recursion 
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+num = int(input("Enter a number: "))
+print("Factorial of", num, "is:", factorial(num))
+
+
+2: Write a Python function using default parameters.
+
+def greet(name="Student"):
+    print("Hello,", name)
+
+# Function call without argument
+greet() 
+
+# Function call with argument
+greet("Rahul")
+
+
+3: Write a Python function using *args.
 *args is used to allow the function to accept any number of positional arguments (variable-length arguments).
 
 * →    means multiple values
@@ -588,8 +623,7 @@ print("Sum =", result)
 
 
 
-Write a Python function using **kwargs.
-
+4:Write a Python function using **kwargs.
 **kwargs is used in a function definition to accept any number of keyword arguments (arguments with names).
 ** → means multiple named values
 kwargs → stands for keyword arguments
@@ -605,8 +639,9 @@ student_info(name="Rahul", age=21, course="Computer Science")
 
 
 
-Write a Python function to check prime number.
-Write a Python function to reverse string.
+5: Write a Python function to check prime number.
+
+6: Write a Python function to reverse string.
 
 ⚠️ SECTION 7 — Exception Handling Questions
 Often asked for production pipeline readiness.
