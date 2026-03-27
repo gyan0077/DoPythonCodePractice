@@ -715,9 +715,51 @@ except FileNotFoundError:
 
 2: Write Python program to handle division by zero exception.
 
+try:
+    num1 = int(input("Enter numerator: "))
+    num2 = int(input("Enter denominator: "))
+    
+    result = num1 / num2
+    
+    print("Result =", result)
+
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+
 3: Write Python program using finally block.
 
-4: Write Python program to create custom exception.
+try:
+    num1 = int(input("Enter numerator: "))
+    num2 = int(input("Enter denominator: "))
+    
+    result = num1 / num2
+    print("Result =", result)
+
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+finally:
+    print("This block always executes.")
+
+4: Write Python program using else block
+
+try:
+    num1 = int(input("Enter numerator: "))
+    num2 = int(input("Enter denominator: "))
+    
+    result = num1 / num2
+
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+else:
+    print("Result =", result)
+
+
+5:  Write Python program to create custom exception.
+
+
 
 🧬 SECTION 8 — Generators & Iterators
 Conceptual questions.
