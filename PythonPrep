@@ -641,22 +641,76 @@ student_info(name="Rahul", age=21, course="Computer Science")
 
 5: Write a Python function to check prime number.
 
-6: Write a Python function to reverse string.
+def check_prime(n):
+    if n <= 1:
+        return "Not a Prime Number" 
+    for i in range(2, n):
+        if n % i == 0:
+            return "Not a Prime Number"  
+    return "Prime Number"
 
-⚠️ SECTION 7 — Exception Handling Questions
-Often asked for production pipeline readiness.
+num = int(input("Enter a number: "))
 
-Write Python program using try-except block to handle file not found error.
-Write Python program to handle division by zero exception.
-Write Python program using finally block.
-Write Python program to create custom exception.
+result = check_prime(num)
+print(result)
+
+
+6: Write a Python function to reverse string 
+def palindrome_number(n):
+    original = n
+    reverse = 0
+    
+    while n > 0:
+        digit = n % 10
+        reverse = reverse * 10 + digit
+        n = n // 10
+        
+    if original == reverse:
+        print("Palindrome Number")
+    else:
+        print("Not a Palindrome Number")
+
+# Method 2
+def check_palindrome(value):
+    value_str = str(value). #Convert int to str
+    
+    if value_str == value_str[::-1]:
+        return "Palindrome"
+    else:
+        return "Not a Palindrome"
+
+data = input("Enter a number or string: ")
+result = check_palindrome(data)
+print(result)
+
+
+7: Write a Python function to reverse string.
+
+def reverse_string(text):
+    return text[::-1]
+
+string = input("Enter a string: ")
+result = reverse_string(string)
+print("Reversed string is:", result)
+
+
+
+⚠️ SECTION 7 — Exception Handling 
+
+1: Write Python program using try-except block to handle file not found error.
+
+2: Write Python program to handle division by zero exception.
+
+3: Write Python program using finally block.
+
+4: Write Python program to create custom exception.
 
 🧬 SECTION 8 — Generators & Iterators
 Conceptual questions.
 
-Difference between iterator and generator.
-Write generator function for even numbers.
-Write generator function for Fibonacci series.
+1: Difference between iterator and generator.
+2: Write generator function for even numbers.
+3: Write generator function for Fibonacci series.
 
 🧱 SECTION 9 — Object Oriented Programming
 
