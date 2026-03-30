@@ -761,6 +761,7 @@ else:
 
 
 
+
 🧬 SECTION 8 — Generators & Iterators
 Conceptual questions.
 
@@ -791,18 +792,18 @@ Conceptual questions.
 6: Merge two dataframes.
 7: Perform groupby aggregation.
 
-🚀 SECTION 11 — Real Data Engineer Scenario Questions - These are interview favorites.
+🚀 SECTION 11 — Real Data Engineer Scenario.
 
-Read CSV file and remove duplicates.
-Convert CSV file into parquet format.
-Read JSON file and flatten nested structure.
-Extract error messages from log file.
-Compare two datasets and find differences.
-Read API response and store into file.
-Process large file line-by-line efficiently.
-Schedule script execution automatically.
-Retry failed records processing logic.
-Log pipeline execution status.
+1: Read CSV file and remove duplicates.
+2: Convert CSV file into parquet format.
+3: Read JSON file and flatten nested structure.
+4: Extract error messages from log file.
+5: Compare two datasets and find differences.
+6: Read API response and store into file.
+7: Process large file line-by-line efficiently.
+8: Schedule script execution automatically.
+9: Retry failed records processing logic.
+10:Log pipeline execution status.
 
 
 ⭐ If You Prepare These 25 Questions First (Priority List)
