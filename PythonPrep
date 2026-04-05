@@ -763,11 +763,85 @@ else:
 
 
 🧬 SECTION 8 — Generators & Iterators
-Conceptual questions.
+
+Iterators and Generators are used to process data one item at a time (memory-efficient way),
+but they are created differently and used differently.
+
 
 1: Difference between iterator and generator.
+
+An iterator is an object that allows us to traverse through elements one by one using:
+
+__iter__() method
+__next__() method
+
+Example: Lists, tuples, strings are iterable objects. We can create iterators from them.
+
+# Example of iterator
+
+numbers = [10, 20, 30]
+it = iter(numbers)   # create iterator
+print(next(it)) # 10
+print(next(it)) # 20
+print(next(it)) # 30
+
+iter() creates iterator
+next() returns next element each time
+
+
+What is a Generator? ⚡
+A generator is a special type of iterator created using: "yield"
+
+# Example of generator
+def my_generator():
+    yield 1
+    yield 2
+    yield 3
+
+g = my_generator()
+print(next(g)) # 1
+print(next(g)) # 2
+print(next(g)) # 3
+
+
 2: Write generator function for even numbers.
+#Python Generator Function (Even Numbers)
+# Generator function for even numbers
+
+def even_numbers(n):
+    for i in range(2, n + 1, 2):
+        yield i
+
+# Taking input from user
+num = int(input("Enter a number: "))
+
+# Calling generator function
+for value in even_numbers(num):
+    print(value)
+
+
+# Alternative Generator
+def even_numbers(n):
+    for i in range(1, n + 1):
+        if i % 2 == 0:
+            yield i
+
 3: Write generator function for Fibonacci series.
+# Generator function for Fibonacci series
+
+def fibonacci(n):
+    a = 0
+    b = 1
+  
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+num = int(input("Enter number of terms: "))
+
+# Calling generator function
+for value in fibonacci(num):
+    print(value)
+
 
 🧱 SECTION 9 — Object Oriented Programming
 
